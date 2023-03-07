@@ -1,0 +1,76 @@
+{
+    "name": "openAi",
+    "identifier": "com.0x588.openai",
+    "description": "Use OpenAI to translate and polish your selected text. You can customize the prompt.",
+    "note": "To use this extension you will need an <a href=\"https://platform.openai.com/account/api-keys\">OpenAPI API key</a>",
+    "popclipVersion": 4069,
+    "icon": "iconify:simple-icons:openai",
+    "actions": [
+        {
+            "title": "Translate",
+            "shellScriptFile": "translate.sh",
+            "icon": "text:circle filled T",
+            "long running": true
+        },
+        {
+            "title": "Polish",
+            "shellScriptFile": "polish.sh",
+            "icon": "text:circle filled P",
+            "long running": true
+        },
+        {
+            "title": "Summarize",
+            "shellScriptFile": "other.sh",
+            "icon": "text:circle filled S",
+            "long running": true
+        }
+    ],
+    "options": [
+        {
+            "identifier": "apikey",
+            "label": "API Key",
+            "type": "string",
+            "description": "Obtain an API key from: https://platform.openai.com/account/api-keys"
+        },
+        {
+            "identifier": "prompt1",
+            "label": "Prompt for translate",
+            "default value": "Please translate to zh-CN",
+            "type": "string"
+        },
+        {
+            "identifier": "prompt2",
+            "label": "Prompt for polish",
+            "default value": "Please correct the grammar and polish the following sentences, do not provide any translation, comments, or notes, and use the same language as input",
+            "type": "string"
+        },
+        {
+            "identifier": "prompt3",
+            "label": "Prompt for summarize",
+            "default value": "Please summarize the following sentences,and use the same language as input",
+            "type": "string"
+        }, 
+        {
+            "identifier": "model",
+            "label": "openAi model",
+            "type": "multiple",
+            "values": [
+                "gpt-3.5-turbo",
+                "gpt-3.5-turbo-0301"
+            ]
+        },
+        {
+            "identifier": "show",
+            "label": "show window",
+            "type": "boolean",
+            "default value": true,
+            "description": "Show result in a popup window"
+        },
+        {
+            "identifier": "proxy",
+            "label": "Proxy",
+            "type": "string",
+            "description": "Proxy url if needed, eg: sock://127.0.0.1:9081"
+        }
+    ]
+}
