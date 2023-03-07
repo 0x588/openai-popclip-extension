@@ -9,7 +9,7 @@ You are free to customize the prompt as desired.
 
 # Preview
 
-<div align=center><img width="70%" height="70%" src="https://github.com/0x588/openai-popclip-extension/preview.gif?raw=true"/></div>
+<div align=center><img width="70%" height="70%" src="https://raw.githubusercontent.com/0x588/openai-popclip-extension/main/preview.gif"/></div>
 
 
 # Configuration
